@@ -55,6 +55,13 @@ class TCYoutubeVideoIdExtractor < Test::Unit::TestCase
 
     # Test case A:
     assert_equal('YQHsXMglC9A', YoutubeVideoId.extract('http://www.youtube.com/watch?argv=xyzxyzxyzxy&v=YQHsXMglC9A'))
+
+    assert_equal('', YoutubeVideoId.extract('https://www.youtube.com/user/AdeleVEVO/videos'))
+    assert_equal('', YoutubeVideoId.extract('https://www.youtube.com/channel/UComP_epzeKzvBX156r6pm1Q'))
+    assert_equal('', YoutubeVideoId.extract('https://www.youtube.com/playlist?list=PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI'))
+    assert_equal('', YoutubeVideoId.extract('https://www.youtube.com/yt/about/'))
+    assert_equal('', YoutubeVideoId.extract('https://www.youtube.com/t/terms'))
+    assert_equal('', YoutubeVideoId.extract('')) # Empty string on purpose
   end
 
   def test_youtube_video_id_is_valid?
