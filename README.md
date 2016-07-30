@@ -5,6 +5,11 @@ This gem makes it easy to extract the YouTube video ID from a YouTube video url.
 These urls come in various forms and it is not exactly trivial to get the video ID out of them. This is where this gem comes in.
 
 
+## Code status
+
+[![Build Status](https://travis-ci.org/krewast/youtube_video_id.svg?branch=master)](https://travis-ci.org/krewast/youtube_video_id)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -53,7 +58,7 @@ Additional parameters or fragment identifiers don't matter. The method knows how
     https://www.youtube.com/watch?feature=youtu.be&v=YQHsXMglC9A
     https://www.youtube.com/watch?v=YQHsXMglC9A#t=0m15s
 
-It's also not important whether a the url contains information about the protocol or not. The extract methods works with all of those:
+It's also not important whether a the url contains information about the protocol or not. The extract methods works with all variants:
 
     youtube.com/watch?v=YQHsXMglC9A
     //www.youtube.com/watch?v=YQHsXMglC9A
@@ -71,10 +76,14 @@ YoutubeVideoId.youtube_video_id_is_valid?('YQHsXMg')     # => false (ID too shor
 
 Please note that this method doesn't "really" check if an ID is valid in the sense that there actually EXISTS a video with this ID. Instead, the method checks if the given video ID "looks right" and could possibly be a valid Youtube video ID.
 
+If you want to make sure whether there actually is a video for a given ID you'll have to consult the [YouTube API](https://developers.google.com/youtube/v3/docs/videos).
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/youtube_video_id. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+If you have any valid urls that link to a YouTube video but for some reason don't work with this gem I would be happy to be notified! 
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/krewast/youtube_video_id. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
