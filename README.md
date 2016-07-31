@@ -1,13 +1,12 @@
 # youtube_video_id
 
+[![Gem Version](https://badge.fury.io/rb/youtube_video_id.svg)](https://badge.fury.io/rb/youtube_video_id)
+[![Build Status](https://travis-ci.org/krewast/youtube_video_id.svg?branch=master)](https://travis-ci.org/krewast/youtube_video_id)
+[![Code Climate](https://codeclimate.com/github/krewast/youtube_video_id/badges/gpa.svg)](https://codeclimate.com/github/krewast/youtube_video_id)
+
 This gem makes it easy to extract the YouTube video ID from a YouTube video url.
 
 These urls come in various forms and it is not exactly trivial to get the video ID out of them. This is where this gem comes in.
-
-
-## Code status
-
-[![Build Status](https://travis-ci.org/krewast/youtube_video_id.svg?branch=master)](https://travis-ci.org/krewast/youtube_video_id)
 
 
 ## Installation
